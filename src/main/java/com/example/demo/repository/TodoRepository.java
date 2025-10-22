@@ -1,11 +1,13 @@
 package com.example.demo.repository;
 
 import com.example.demo.model.Todo;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class TodoRepository {
 
     private final List<Todo> todoList = new ArrayList<>();
