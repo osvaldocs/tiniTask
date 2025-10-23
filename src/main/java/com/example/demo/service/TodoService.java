@@ -2,7 +2,6 @@ package com.example.demo.service;
 
 import com.example.demo.model.Todo;
 import com.example.demo.repository.TodoRepository;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -35,6 +34,16 @@ public class TodoService {
     public Optional<Todo> toggleDone(int id) {
         Optional<Todo> todoOpt = repository.findById(id);
 
-        if (todoOpt.isPresent())
+        if (todoOpt.isPresent()) {
+           Todo todo = todoOpt.get();
+           todo.setDone(!todo.isDone());
+           return Optional.of(todo);
+        } else {
+            return Optional.empty();
+        }
+    }
+
+    public boolean delete(int id) {
+        return repository.deleteById(id);
     }
 }
