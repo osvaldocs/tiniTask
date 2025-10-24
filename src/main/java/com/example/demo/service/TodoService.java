@@ -46,4 +46,9 @@ public class TodoService {
     public boolean delete(int id) {
         return repository.deleteById(id);
     }
+
+    public Optional<Todo> findById(int id) {
+        return repository.findById(id);
+    }
+
 }
