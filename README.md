@@ -31,7 +31,7 @@ El objetivo del proyecto es integrar un backend en **Java + Spring Boot** con un
 ---
 
 ## 📁 Estructura del proyecto
-
+```
 SpringBoot_Riwi/
 │
 ├── backend/
@@ -50,8 +50,8 @@ SpringBoot_Riwi/
 └── frontend/
     ├── index.html
     └── app.js
+```
 
----
 
 ## 🧩 Endpoints principales
 
